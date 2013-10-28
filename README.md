@@ -1,7 +1,7 @@
 Hiro
 ====
 
-Generates HTML from API Blueprints using Snow Crash and Iglo.
+Generates HTML from API Blueprints using [Snow Crash](https://github.com/apiaryio/snowcrash) and [Iglo](https://github.com/subosito/iglo).
 
 ## Installation
 
