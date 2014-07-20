@@ -25,7 +25,7 @@ Refer to the snowcrash page if you are using a different OS.
 ## Usage
 
 ```bash
-$ hiro
+$ hiro --help
 
 Command line arguments:
 
