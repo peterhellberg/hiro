@@ -7,6 +7,7 @@ import (
 	"github.com/subosito/iglo"
 )
 
+// Generate generates HTML output from Markdown input
 func Generate(inputFile, outputFile string) error {
 	// Open the input file
 	input, err := openInputFile(inputFile)
@@ -32,11 +33,11 @@ func openInputFile(inputFile string) (*os.File, error) {
 	// Check if the input file exists
 	finfo, err := os.Stat(inputFile)
 	if err != nil {
-		return nil, errors.New("The input file does not exist.")
+		return nil, errors.New("input file does not exist")
 	}
 
 	if finfo.IsDir() {
-		return nil, errors.New("The input file is a directory.")
+		return nil, errors.New("input file is a directory")
 	}
 
 	// Open the input file
