@@ -3,6 +3,8 @@ Hiro
 
 Generates HTML from API Blueprints using [Snow Crash](https://github.com/apiaryio/snowcrash) and [Iglo](https://github.com/subosito/iglo).
 
+[![GoDoc](https://godoc.org/github.com/peterhellberg/hiro/hiro?status.svg)](https://godoc.org/github.com/peterhellberg/hiro/hiro)
+
 ## Installation
 
 ```bash
