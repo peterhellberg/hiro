@@ -32,7 +32,7 @@ $ hiro --help
 Command line arguments:
 
   -input="blueprint.md": Input file (.md)
-  -output="blueprint.html": Output file (.html)
+  -output="index.html": Output file (.html)
 ```
 
 ## License

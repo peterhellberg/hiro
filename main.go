@@ -10,7 +10,7 @@ import (
 
 // Command line flags
 var inputFile = flag.String("input", "blueprint.md", "Input file (.md)")
-var outputFile = flag.String("output", "blueprint.html", "Output file (.html)")
+var outputFile = flag.String("output", "index.html", "Output file (.html)")
 
 func main() {
 	// Command line usage information
