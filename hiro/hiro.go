@@ -57,12 +57,11 @@ var Tmpl = `<!DOCTYPE html>
 		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 		<style>
 			tt, pre, code { font-family: Consolas, "Liberation Mono", Courier, monospace; background-color: transparent !important; }
-			pre.prettyprint { border: 0px !important; background-color: #fff; margin-bottom: -1em; }
+			pre.prettyprint { border: 0px !important; background-color: #fff; margin-bottom: -0.5em; }
 			.panel-heading h2 { margin-top: 0.5em; }
 			.bg-default { background-color: #F8F8F8; }
 			.snippet { background: #F8F8; list-style: none; }
 			.snippet-toggle { margin-top: -0.3em; }
-			.nav-rg { width: 200px; }
 		</style>
 	</head>
 	<body>
@@ -195,7 +194,7 @@ var Tmpl = `<!DOCTYPE html>
 {{end}}
 {{end}}
 {{define "NavResourceGroups"}}
-<ul class="nav nav-pills nav-rg" id="group-tab">
+<ul class="nav nav-pills" id="group-tab">
 	{{range .}}
 		<li><a href="#{{.Name | dasherize}}" data-toggle="tab"><strong>{{.Name}}</strong></a></li>
 	{{end}}
