@@ -58,6 +58,7 @@ var Tmpl = `<!DOCTYPE html>
 		<style>
 			tt, pre, code { font-family: Consolas, "Liberation Mono", Courier, monospace; background-color: transparent !important; }
 			pre.prettyprint { border: 0px !important; background-color: #fff; margin-bottom: -1em; }
+			.panel-heading h2 { margin-top: 0.5em; }
 			.bg-default { background-color: #F8F8F8; }
 			.snippet { background: #F8F8; list-style: none; }
 			.snippet-toggle { margin-top: -0.3em; }
@@ -67,18 +68,18 @@ var Tmpl = `<!DOCTYPE html>
 	<body>
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-12 col-md-12">
+				<div class="col-md-12">
 					<div class="page-header">
 						<h1>{{.Name}}</h1>
 						<h2><small>{{.Description | markdownize}}</small></h2>
 					</div>
 				</div>
 			</div>
+			<div class="row" style="margin-bottom: 2em;">
+				<div class="col-md-12">{{template "NavResourceGroups" .ResourceGroups}}</div>
+			</div>
 			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-md-3">{{template "NavResourceGroups" .ResourceGroups}}</div>
-				<div class="clearfix visible-xs-block"><hr></div>
-				<div class="clearfix visible-sm-block"><hr></div>
-				<div class="col-xs-12 col-sm-12 col-md-9">
+				<div class="col-xs-12 col-sm-12 col-md-12">
 					<div class="tab-content">{{template "ResourceGroups" .ResourceGroups}}</div>
 				</div>
 			</div>
@@ -194,7 +195,7 @@ var Tmpl = `<!DOCTYPE html>
 {{end}}
 {{end}}
 {{define "NavResourceGroups"}}
-<ul class="nav nav-pills nav-stacked nav-rg affix" id="group-tab">
+<ul class="nav nav-pills nav-rg" id="group-tab">
 	{{range .}}
 		<li><a href="#{{.Name | dasherize}}" data-toggle="tab"><strong>{{.Name}}</strong></a></li>
 	{{end}}
