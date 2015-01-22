@@ -60,7 +60,7 @@ var Tmpl = `<!DOCTYPE html>
 			pre.prettyprint { border: 0px !important; background-color: #fff; margin-bottom: -0.5em; }
 			.panel-heading h2 { margin-top: 0.5em; }
 			.bg-default { background-color: #F8F8F8; }
-			.snippet { background: #F8F8; list-style: none; }
+			.snippet { background: #F8F8; list-style: none; display: none; }
 			.snippet-toggle { margin-top: -0.3em; }
 		</style>
 	</head>
@@ -89,6 +89,7 @@ var Tmpl = `<!DOCTYPE html>
 		<script>
 			jQuery(function($) {
 				$('#group-tab a:first').tab('show');
+
 				$('.snippet-toggle').on("click", function(e) {
 					e.preventDefault();
 					var target = $(this).data('target');
@@ -107,7 +108,7 @@ var Tmpl = `<!DOCTYPE html>
 	{{range .}}
 		<li class="list-group-item bg-default response">
 			<strong>Response <code>{{.Name}}</code></strong>
-			<a href="javascript:;" class="pull-right btn btn-link btn-sm snippet-toggle">HIDE</a>
+			<a href="javascript:;" class="pull-right btn btn-link btn-sm snippet-toggle">SHOW</a>
 		</li>
 		<li class="list-group-item snippet">
 			{{if .Headers}}
@@ -123,7 +124,7 @@ var Tmpl = `<!DOCTYPE html>
 	{{range .}}
 		<li class="list-group-item bg-default response">
 			<strong>Requests</strong>
-			<a href="javascript:;" class="pull-right btn btn-link btn-sm snippet-toggle">HIDE</a>
+			<a href="javascript:;" class="pull-right btn btn-link btn-sm snippet-toggle">SHOW</a>
 		</li>
 		<li class="list-group-item snippet">
 			{{if .Headers}}
