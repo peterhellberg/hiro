@@ -9,8 +9,11 @@ import (
 )
 
 // Command line flags
-var inputFile = flag.String("input", "blueprint.md", "Input file (.md)")
-var outputFile = flag.String("output", "index.html", "Output file (.html)")
+var (
+	inputFn    = flag.String("input", "blueprint.md", "Input file (.md)")
+	outputFn   = flag.String("output", "index.html", "Output file (.html)")
+	templateFn = flag.String("template", "", "Iglo template file")
+)
 
 func main() {
 	// Command line usage information
@@ -24,7 +27,7 @@ func main() {
 	flag.Parse()
 
 	// Generate the output file
-	err := hiro.Generate(*inputFile, *outputFile)
+	err := hiro.Generate(*inputFn, *outputFn, *templateFn)
 	if err != nil {
 		fmt.Println("Error:", err)
 	}

@@ -33,6 +33,7 @@ Command line arguments:
 
   -input="blueprint.md": Input file (.md)
   -output="index.html": Output file (.html)
+  -template="": Iglo template file
 ```
 
 ## License
