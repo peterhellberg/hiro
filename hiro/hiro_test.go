@@ -5,7 +5,7 @@ import "testing"
 func TestReadTemplate_WithBlankFn(t *testing.T) {
 	tmpl, err := readTemplate("")
 	if err != nil {
-		t.Fatalf("unexpected error", err)
+		t.Fatalf("unexpected error: %+v", err)
 	}
 
 	if string(tmpl) != DefaultTemplate {
