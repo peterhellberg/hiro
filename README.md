@@ -14,13 +14,13 @@ $ go get -u github.com/peterhellberg/hiro
 
 ## Dependencies
 
-Hiro requires [Snow Crash](https://github.com/apiaryio/snowcrash) to be installed.
+Hiro requires [Drafter](https://github.com/apiaryio/drafter) to be installed.
 
 Install it on OS X using Homebrew:
 
 ```bash
 $ brew install --HEAD \
-  https://raw.github.com/apiaryio/snowcrash/master/tools/homebrew/snowcrash.rb
+  https://raw.github.com/apiaryio/drafter/master/tools/homebrew/drafter.rb
 ```
 
 Refer to the snowcrash page if you are using a different OS.
