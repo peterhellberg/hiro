@@ -1,7 +1,8 @@
 Hiro
 ====
 
-Generates HTML from API Blueprints using [Snow Crash](https://github.com/apiaryio/snowcrash) and [Iglo](https://github.com/subosito/iglo).
+Generates HTML from API Blueprints using the [Snow Crash](https://github.com/apiaryio/snowcrash) command line tool
+[Drafter](https://github.com/apiaryio/drafter) and [Iglo](https://github.com/subosito/iglo).
 
 [![GoDoc](https://godoc.org/github.com/peterhellberg/hiro/hiro?status.svg)](https://godoc.org/github.com/peterhellberg/hiro/hiro)
 [![License MIT](https://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)](https://github.com/peterhellberg/hiro#license-mit)
@@ -23,7 +24,7 @@ $ brew install --HEAD \
   https://raw.github.com/apiaryio/drafter/master/tools/homebrew/drafter.rb
 ```
 
-Refer to the snowcrash page if you are using a different OS.
+Refer to the Drafter [build](https://github.com/apiaryio/drafter#build) notes if you are using a different OS.
 
 ## Usage
 
