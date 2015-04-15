@@ -7,12 +7,6 @@ Generates HTML from API Blueprints using the [Snow Crash](https://github.com/api
 [![GoDoc](https://godoc.org/github.com/peterhellberg/hiro/hiro?status.svg)](https://godoc.org/github.com/peterhellberg/hiro/hiro)
 [![License MIT](https://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)](https://github.com/peterhellberg/hiro#license-mit)
 
-## Installation
-
-```bash
-$ go get -u github.com/peterhellberg/hiro
-```
-
 ## Dependencies
 
 Hiro requires [Drafter](https://github.com/apiaryio/drafter) to be installed.
@@ -25,6 +19,12 @@ $ brew install --HEAD \
 ```
 
 Refer to the Drafter [build](https://github.com/apiaryio/drafter#build) notes if you are using a different OS.
+
+## Installation
+
+```bash
+$ go get -u github.com/peterhellberg/hiro
+```
 
 ## Usage
 
