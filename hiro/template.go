@@ -42,7 +42,16 @@ var DefaultTemplate = `<!DOCTYPE html>
 		<script src="//google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
 		<script>
 			jQuery(function($) {
-				$('#group-tab a:first').tab('show');
+ 				$('#group-tab a[data-toggle="tab"]').on("click", function(e) {
+ 					window.location.hash = $(this).attr("href");
+ 				});
+
+ 				if(window.location.hash){
+ 					$('#group-tab a:first').tab('show');
+ 					$('#group-tab a[href$="'+ window.location.hash +'"]').tab("show");
+ 				} else {
+ 					$('#group-tab a:first').tab('show');
+ 				}
 
 				$('.snippet-toggle').on("click", function(e) {
 					e.preventDefault();
