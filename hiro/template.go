@@ -16,6 +16,7 @@ var DefaultTemplate = `<!DOCTYPE html>
 			.bg-default { background-color: #F8F8F8; }
 			.snippet { background: #F8F8; list-style: none; display: none; }
 			.snippet-toggle { margin-top: -0.3em; }
+			.panel-body tbody tr td:first-child strong { padding-right: 0.8em; }
 		</style>
 	</head>
 	<body>
