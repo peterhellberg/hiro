@@ -5,7 +5,7 @@ import (
 	"io/ioutil"
 	"os"
 
-	"github.com/peterhellberg/iglo"
+	"github.com/subosito/iglo"
 )
 
 // Errors
