@@ -86,7 +86,7 @@ baz    | qux
 A description of this group of endpoints.
 ```
 
-![Hiro Blueprint Output](http://assets.c7.se/skitch/Hiro_Blueprint_Output_Example-20160511-111116.png)
+![Hiro Blueprint Output](http://assets.c7.se/skitch/Hiro_Blueprint_Output_Example-20160511-161557.png)
 
 ## License (MIT)
 
