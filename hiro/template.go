@@ -8,7 +8,7 @@ var DefaultTemplate = `<!DOCTYPE html>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>{{.Name}}</title>
 		<meta name="description" content="{{trim .Description "\n"}}">
-		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 		<style>
 			tt, pre, code { font-family: Consolas, "Liberation Mono", Courier, monospace; background-color: transparent !important; }
 			pre.prettyprint { border: 0px !important; background-color: #fff; margin-bottom: -0.5em; }
@@ -42,9 +42,9 @@ var DefaultTemplate = `<!DOCTYPE html>
 				</div>
 			</div>
 		</div>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-		<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-		<script src="//google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 		<script>
 			jQuery(function($) {
  				$('#group-tab a[data-toggle="tab"]').on("click", function(e) {
