@@ -12,6 +12,10 @@ var DefaultTemplate = `<!DOCTYPE html>
 		<style>
 			tt, pre, code { font-family: Consolas, "Liberation Mono", Courier, monospace; background-color: transparent !important; }
 			pre.prettyprint { border: 0px !important; background-color: #fff; margin-bottom: -0.5em; }
+			table { width: 100%; border-collapse: collapse; margin-bottom: 1.3em; }
+			th { background: #ededed; }
+			td, th { padding: 6px 9.5px; border: 1px solid #ddd; text-align: left; }
+			tbody tr:nth-of-type(even){ background:rgba(220,220,220,0.2); }
 			.panel-heading h2 { margin-top: 0.5em; }
 			.bg-default { background-color: #F8F8F8; }
 			.snippet { background: #F8F8; list-style: none; display: none; }
