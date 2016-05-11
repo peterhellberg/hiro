@@ -39,6 +39,55 @@ Command line arguments:
   -template="": Iglo template file
 ```
 
+## Example
+
+```markdown
+# Service Name
+
+A short description of the service.
+
+## Group Group 1
+
+A description of this group of endpoints
+
+## /endpoint
+
++ Parameters
+  + foo (required, string, `example`)
+  A description of the foo parameter
+  + bar (optional, integer, `123`)
+  A description of the bar parameter
+
+### GET
+
+A description of the endpoint.
+
+header | another header
+-------|---------------
+foo    | bar
+baz    | qux
+
+> A quote related to the endpoint
+
+**Bold text**
+
+    func some(code Example) string {
+      return "related to the endpoint"
+    }
+
++ Response 200 (application/json; charset=utf-8)
+  + Headers
+  X-Example header
+  + Body
+  {"endpoint": "response"}
+
+## Group Group 2
+
+A description of this group of endpoints.
+```
+
+![Hiro Blueprint Output](http://assets.c7.se/skitch/Hiro_Blueprint_Output_Example-20160511-111116.png)
+
 ## License (MIT)
 
 Copyright (c) 2015-2016 [Peter Hellberg](http://c7.se/)
