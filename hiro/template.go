@@ -43,7 +43,7 @@ var DefaultTemplate = `<!DOCTYPE html>
 			</div>
 		</div>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.min.js"></script>
+		<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 		<script>
 			jQuery(function($) {
