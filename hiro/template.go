@@ -18,7 +18,7 @@ var DefaultTemplate = `<!DOCTYPE html>
 			tbody tr:nth-of-type(even){ background:rgba(220,220,220,0.2); }
 			.panel-heading h2 { margin-top: 0.5em; }
 			.bg-default { background-color: #F8F8F8; }
-			.snippet { background: #F8F8; list-style: none; display: none; }
+			.snippet { background: #F8F8F8; list-style: none; display: none; }
 			.snippet-toggle { margin-top: -0.3em; }
 			.panel-body tbody tr td:first-child strong { padding-right: 0.8em; }
 		</style>
