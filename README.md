@@ -16,7 +16,8 @@ Hiro requires [Drafter](https://github.com/apiaryio/drafter) to be installed.
 Install it on OS X using Homebrew:
 
 ```bash
-$ brew install --HEAD drafter
+$ brew install --HEAD \
+  https://raw.github.com/apiaryio/drafter/master/tools/homebrew/drafter.rb
 ```
 
 Refer to the Drafter [build](https://github.com/apiaryio/drafter#build) notes if you are using a different OS.
