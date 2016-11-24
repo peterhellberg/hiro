@@ -11,8 +11,6 @@ Generates HTML from API Blueprints using the [Snow Crash](https://github.com/api
 
 Hiro requires [Drafter](https://github.com/apiaryio/drafter) to be installed.
 
-**Hiro only support Drafter v2.3.x so you’ll have to install it**
-
 Install it on OS X using Homebrew:
 
 ```bash
