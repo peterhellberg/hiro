@@ -26,6 +26,8 @@ Refer to the Drafter [build](https://github.com/apiaryio/drafter#build) notes if
 $ go get -u github.com/peterhellberg/hiro
 ```
 
+You can also download binaries from the [releases page](https://github.com/peterhellberg/hiro/releases).
+
 ## Usage
 
 ```bash
