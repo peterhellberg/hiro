@@ -155,7 +155,11 @@ var DefaultTemplate = `<!DOCTYPE html>
 				<h2 id="{{.Name | dasherize}}">{{.Name}}</h2>
 			</div>
 			<div class="panel-body">
-				{{.Description | markdownize}}
+				<div class="lead">
+					<small>
+						{{.Description | markdownize}}
+					</small>
+				</div>
 				{{template "Resources" .Resources}}
 			</div>
 		</div>
