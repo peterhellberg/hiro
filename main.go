@@ -20,7 +20,6 @@ func main() {
 	flag.Usage = func() {
 		fmt.Fprintf(os.Stderr, "\nCommand line arguments:\n\n")
 		flag.PrintDefaults()
-		os.Exit(0)
 	}
 
 	// Parse the command line flags
