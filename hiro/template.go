@@ -111,17 +111,36 @@ var DefaultTemplate = `<!DOCTYPE html>
 	{{end}}
 {{end}}
 {{define "Parameters"}}
-<dl class="dl-horizontal">
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Required</th>
+		<th>Type</th>
+		<th>Example</th>
+		<th>Description</th>
+	</tr>
 	{{range $index := .}}
-		<dt>{{.Name}}</dt>
-		<dd>
-		{{if .Required}}
-			<strong>(required)</strong>
-		{{end}}
-		<code>{{.Type}}</code> {{.Description}}
-		</dd>
+		<tr>
+			<td>{{.Name}}</td>
+			<td>
+				{{if .Required}}
+					<strong>yes</strong>
+				{{else}}
+					no
+				{{end}}
+			</td>
+			<td>
+				{{.Type}}
+			</td>
+			<td>
+				{{if .Example}}
+					<code>{{.Example}}</code>
+				{{end}}
+			</td>
+			<td>{{.Description}}</td>
+		</tr>
 	{{end}}
-</dl>
+</table>
 {{end}}
 {{define "Resources"}}
 {{range .}}
