@@ -23,6 +23,7 @@ var DefaultTemplate = `<!DOCTYPE html>
 			.parameters { margin-bottom: 0; }
 			.parameters-li { padding: 0; }
 			.parameters td { vertical-align: top; border-color: #eee; border-width: 0 0 1px 0; }
+			.parameters td p { margin-bottom: 0; }
 			.parameters thead th { padding: 3px 9px 3px 11px; color: #595959; font-weight: 400; font-size: 0.75em; }
 			.parameters tbody tr:nth-of-type(even){ background: #fff; }
 			.parameters tbody tr:last-child td { border-bottom: 0; }
@@ -142,7 +143,7 @@ var DefaultTemplate = `<!DOCTYPE html>
 			<td class="parameter-name">
 				<strong>{{.Name}}</strong>
 			</td>
-			<td>{{.Description}}</td>
+			<td>{{.Description | markdownize}}</td>
 			<td>
 				{{if .Required}}
 					<strong>Required</strong>
