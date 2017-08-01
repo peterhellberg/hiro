@@ -17,14 +17,15 @@ var DefaultTemplate = `<!DOCTYPE html>
 			td, th { padding: 6px 9.5px; border: 1px solid #ddd; text-align: left; }
 			tbody tr:nth-of-type(even){ background:rgba(220,220,220,0.2); }
 			.panel-heading h2 { margin-top: 0.5em; }
-			.bg-default { color: #31708f; background-color: #d9edf7; border-color: #bce8f1; }
+			.bg-default { background-color: #F8F8F8; }
 			.snippet { background: #FFFFFF; list-style: none; display: none; }
 			.snippet-toggle { margin-top: -0.3em; }
 			.panel-body tbody tr td:first-child strong { padding-right: 0.8em; }
 			.parameters { margin-bottom: 0; }
 			.parameters-li { padding: 0; }
 			.parameters td { vertical-align: top; border-color: #eee; border-width: 0 0 1px 0; }
-			.parameters tbody tr:nth-of-type(even){ background:rgba(230,230,230,0.2); }
+			.parameters tbody tr:nth-of-type(even){ background: #fff; }
+			.parameters tbody tr:last-child td { border-bottom: 0; }
 			.parameter-name { text-align: right; }
 			@media screen and (max-width: 640px) {
 				.parameters {
