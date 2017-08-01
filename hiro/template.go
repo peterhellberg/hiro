@@ -13,20 +13,24 @@ var DefaultTemplate = `<!DOCTYPE html>
 			tt, pre, code { font-family: Consolas, "Liberation Mono", Courier, monospace; background-color: transparent !important; }
 			pre.prettyprint { border: 0px !important; background-color: #fff; margin-bottom: -0.5em; }
 			table { width: 100%; border-collapse: collapse; margin-bottom: 1.3em; }
-			th { background: #ededed; }
-			td, th { padding: 6px 9.5px; border: 1px solid #ddd; text-align: left; }
+			th { background: #f2f2f2; }
+			td, th { padding: 6px 9.5px; border: 1px solid #e4e4e4; text-align: left; }
 			tbody tr:nth-of-type(even){ background:rgba(220,220,220,0.2); }
 			.panel-heading h2 { margin-top: 0.5em; }
 			.bg-default { background-color: #F8F8F8; }
 			.snippet { background: #FFFFFF; list-style: none; display: none; }
 			.snippet-toggle { margin-top: -0.3em; }
-			.panel-body tbody tr td:first-child strong { padding-right: 0.8em; }
 			.parameters { margin-bottom: 0; }
 			.parameters-li { padding: 0; }
 			.parameters td { vertical-align: top; border-color: #eee; border-width: 0 0 1px 0; }
+			.parameters thead th { padding: 3px 9px 3px 11px; color: #595959; font-weight: 400; font-size: 0.75em; }
 			.parameters tbody tr:nth-of-type(even){ background: #fff; }
 			.parameters tbody tr:last-child td { border-bottom: 0; }
 			.parameter-name { text-align: right; }
+			.parameters .label-string { background: #99ac6d; }
+			.parameters .label-boolean { background: #8298bd; }
+			.parameters .label-integer { background: #cd6a50; }
+			.parameters .label-time { background: #f0ad4e; }
 			@media screen and (max-width: 640px) {
 				.parameters {
 					overflow-x: auto;
@@ -124,6 +128,15 @@ var DefaultTemplate = `<!DOCTYPE html>
 {{end}}
 {{define "Parameters"}}
 <table class="parameters">
+	<thead>
+		<tr>
+			<th class="parameter-name">Name</th>
+			<th>Description</th>
+			<th>Required</th>
+			<th>Type</th>
+			<th>Example</th>
+		</tr>
+	</thead>
 	{{range $index := .}}
 		<tr>
 			<td class="parameter-name">
@@ -132,11 +145,11 @@ var DefaultTemplate = `<!DOCTYPE html>
 			<td>{{.Description}}</td>
 			<td>
 				{{if .Required}}
-					<strong>required</strong>
+					<strong>Required</strong>
 				{{end}}
 			</td>
 			<td>
-				{{.Type}}
+				<span class="label label-default label-{{.Type}}">{{.Type}}</span>
 			</td>
 			<td>
 				{{if .Example}}
