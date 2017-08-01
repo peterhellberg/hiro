@@ -17,10 +17,21 @@ var DefaultTemplate = `<!DOCTYPE html>
 			td, th { padding: 6px 9.5px; border: 1px solid #ddd; text-align: left; }
 			tbody tr:nth-of-type(even){ background:rgba(220,220,220,0.2); }
 			.panel-heading h2 { margin-top: 0.5em; }
-			.bg-default { background-color: #F8F8F8; }
+			.bg-default { color: #31708f; background-color: #d9edf7; border-color: #bce8f1; }
 			.snippet { background: #FFFFFF; list-style: none; display: none; }
 			.snippet-toggle { margin-top: -0.3em; }
 			.panel-body tbody tr td:first-child strong { padding-right: 0.8em; }
+			.parameters { margin-bottom: 0; }
+			.parameters-li { padding: 0; }
+			.parameters td { vertical-align: top; border-color: #eee; border-width: 0 0 1px 0; }
+			.parameters tbody tr:nth-of-type(even){ background:rgba(230,230,230,0.2); }
+			.parameter-name { text-align: right; }
+			@media screen and (max-width: 640px) {
+				.parameters {
+					overflow-x: auto;
+					display: block;
+				}
+			}
 		</style>
 	</head>
 	<body>
@@ -111,22 +122,16 @@ var DefaultTemplate = `<!DOCTYPE html>
 	{{end}}
 {{end}}
 {{define "Parameters"}}
-<table>
-	<tr>
-		<th>Name</th>
-		<th>Required</th>
-		<th>Type</th>
-		<th>Example</th>
-		<th>Description</th>
-	</tr>
+<table class="parameters">
 	{{range $index := .}}
 		<tr>
-			<td>{{.Name}}</td>
+			<td class="parameter-name">
+				<strong>{{.Name}}</strong>
+			</td>
+			<td>{{.Description}}</td>
 			<td>
 				{{if .Required}}
-					<strong>yes</strong>
-				{{else}}
-					no
+					<strong>required</strong>
 				{{end}}
 			</td>
 			<td>
@@ -137,7 +142,6 @@ var DefaultTemplate = `<!DOCTYPE html>
 					<code>{{.Example}}</code>
 				{{end}}
 			</td>
-			<td>{{.Description}}</td>
 		</tr>
 	{{end}}
 </table>
@@ -158,7 +162,7 @@ var DefaultTemplate = `<!DOCTYPE html>
 		<ul class="list-group">
 			{{if $Parameters}}
 				<li class="list-group-item bg-default"><strong>Parameters</strong></li>
-				<li class="list-group-item">{{template "Parameters" $Parameters}}</li>
+				<li class="list-group-item parameters-li">{{template "Parameters" $Parameters}}</li>
 			{{end}}
 			{{if .Examples}}{{template "Examples" .Examples}}{{end}}
 		</ul>
