@@ -9,7 +9,7 @@ Generates HTML from API Blueprints using the [Snow Crash](https://github.com/api
 
 ## Dependencies
 
-Hiro requires [Drafter](https://github.com/apiaryio/drafter) v3.2.2 to be installed.
+Hiro requires [Drafter](https://github.com/apiaryio/drafter) *v3.x* to be installed.
 
 Any newer release is not supported due to usage of the deprecated `--type=ast`
 option ([apiaryio/drafter@a7dd4c5](https://github.com/apiaryio/drafter/commit/a7dd4c5)).
