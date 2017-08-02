@@ -27,6 +27,8 @@ var DefaultTemplate = `<!DOCTYPE html>
 			.parameters thead th { padding: 3px 9px 3px 11px; color: #595959; font-weight: 400; font-size: 0.75em; }
 			.parameters tbody tr:nth-of-type(even){ background: #fff; }
 			.parameters tbody tr:last-child td { border-bottom: 0; }
+			.parameters tbody td:nth-child(1) { width: 10%; min-width: 100px; }
+			.parameters tbody td:nth-child(2) { width: 60%; }
 			.parameter-name { text-align: right; }
 			.parameters .label-string { background: #99ac6d; }
 			.parameters .label-boolean { background: #8298bd; }
