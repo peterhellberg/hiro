@@ -24,11 +24,13 @@ var DefaultTemplate = `<!DOCTYPE html>
 			.parameters-li { padding: 0; }
 			.parameters td { vertical-align: top; border-color: #eee; border-width: 0 0 1px 0; }
 			.parameters td p { margin-bottom: 0; }
+			.parameters td code { padding: 0; }
 			.parameters thead th { padding: 3px 9px 3px 11px; color: #595959; font-weight: 400; font-size: 0.75em; }
 			.parameters tbody tr:nth-of-type(even){ background: #fff; }
 			.parameters tbody tr:last-child td { border-bottom: 0; }
 			.parameters tbody td:nth-child(1) { width: 10%; min-width: 100px; }
 			.parameters tbody td:nth-child(2) { width: 60%; }
+			.parameter-example { word-break: keep-all; }
 			.parameter-name { text-align: right; }
 			.parameters .label-string { background: #99ac6d; }
 			.parameters .label-boolean { background: #8298bd; }
@@ -145,16 +147,16 @@ var DefaultTemplate = `<!DOCTYPE html>
 			<td class="parameter-name">
 				<strong>{{.Name}}</strong>
 			</td>
-			<td>{{.Description | markdownize}}</td>
-			<td>
+			<td class="parameter-description">{{.Description | markdownize}}</td>
+			<td class="parameter-required">
 				{{if .Required}}
 					<strong>Required</strong>
 				{{end}}
 			</td>
-			<td>
+			<td class="parameter-type">
 				<span class="label label-default label-{{.Type}}">{{.Type}}</span>
 			</td>
-			<td>
+			<td class="parameter-example">
 				{{if .Example}}
 					<code>{{.Example}}</code>
 				{{end}}
